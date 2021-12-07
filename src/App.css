@@ -1,38 +1,136 @@
 .App {
-  text-align: center;
+  text-align: left;
+  font-family: inherit;
+  background-position-x: left; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Title{
+  font-size: 10px;
+  /* padding-top: 10px; */
+  /* padding-left: 8px; */
+  height: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Title h1{
+  margin-block-start: 0.0em;
+  margin-block-end: 0.0em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.PhotoSpacer{
+  /* margin-bottom: 40px;
+  padding-bottom: 40px; */
+  padding-top: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.Canvas{
+  padding: 45px; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Header{
+  position: fixed;
+  float: none;
+  padding-left: 8px;
+}
+
+.Navbar{
+  /* padding-top: 10px; */
+  font-weight:bold;
+}
+
+ul{
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0;
+  /* padding-left: 8px; */
+}
+
+ul li:hover{
+  color: lightslategray;
+}
+
+/* Hidden sublists */
+.Subnav{
+  font-weight: normal;
+}
+
+.SublistA {
+  visibility: hidden;
+  display: none;
+} 
+
+.SublistB {
+  visibility: hidden;
+  display: none;
+} 
+
+.SublistC {
+  visibility: hidden;
+  display: none;
+} 
+
+.SublistD {
+  visibility: hidden;
+  display: none;
+} 
+
+.SublistE {
+  visibility: hidden;
+  display: none;
+} 
+
+.SublistF {
+  visibility: hidden;
+  display: none;
+} 
+
+.Media{
+  margin-left: 130px; 
+}
+
+.HomePhoto{
+  height: auto;
+  width: 800px;
+}
+
+.PhotoButtonWrapper{
+  /* padding-top: 20px; */
+  width: 800px;
+  display: inline-block;
+  padding-left: 130px;
+}
+
+.PhotoButtons{
+  float: left;
+  padding-left: 10px;
+  width: 40px;
+  display: table;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ImageInfo{
+  float: right;
+  font-size: 14px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.LeftButton{
+  float: left;
+}
+
+.RightButton{
+  float: right;
+}
+
+.Footer{
+  padding-left: 8px;
+  /* padding-top: 10px; */
+  width: 922px; 
+  height: auto;
+  text-align: justify;
+  /* display: inline; */
 }
