@@ -61,7 +61,7 @@ export default class HeaderComponent extends Component {
                       <div className='Subnav'>
                         <div className='SublistD'>
                           <ul>
-                            <li>tbd aa</li>
+                            <li>Tech</li>
                             <li>tbd ab</li>
                             <li>tbd ac</li>
                           </ul>
@@ -71,7 +71,7 @@ export default class HeaderComponent extends Component {
                       <div className='Subnav'>
                         <div className='SublistE'>
                           <ul>
-                            <li>tbd ba</li>
+                            <li>tbd aa</li>
                             <li>tbd bb</li>
                             <li>tbd bc</li>
                           </ul>
