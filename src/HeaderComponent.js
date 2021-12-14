@@ -32,7 +32,7 @@ export default class HeaderComponent extends Component {
                         <div className='SublistA'>
                           <ul>
                             <li>Photography</li>
-                            <li>Digital Art</li>
+                            <li>Photographers</li>
                             <li>Design</li>
                             <li>Selected 2D</li>
                           </ul>
