@@ -4,6 +4,17 @@
   background-position-x: left; 
 }
 
+a {
+  text-decoration: none;
+  color: blue;
+} 
+
+a:visited {
+  text-decoration: none;
+  text-decoration-color: inherit;
+  color: inherit;
+}
+
 .Title{
   font-size: 10px;
   /* padding-top: 10px; */
@@ -35,6 +46,7 @@
 .Navbar{
   /* padding-top: 10px; */
   font-weight:bold;
+  width: 100px
 }
 
 ul{
@@ -133,4 +145,48 @@ ul li:hover{
   height: auto;
   text-align: justify;
   /* display: inline; */
+}
+
+.photographersCanvas {
+  padding-left: 130px;
+}
+
+.photographersWrapper {
+  height: 600px;
+}
+
+.photographersItem {
+  height: 150px;
+  padding-top:0px;
+  margin-top:0px;
+}
+
+.photographersItem ul {
+  display: block;
+}
+
+.photographersItem li {
+  display: inline-block;
+  padding-right: 15px;
+  font-size: 13px;
+}
+
+.photographersNameWrapper li{
+  display: block;
+  /* vertical-align: middle; */
+}
+
+/* .photographersScroller ul {
+  padding-top: 0px;
+} */
+
+.photographersScroller li{
+  /* height: 125px; */
+  width: auto;
+  margin-top: -4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  list-style-position:inside;
+  border: 1px solid black;
+  display: inline-block;
 }

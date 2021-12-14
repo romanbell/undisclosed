@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Router, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
+import Photographers from './photographers';
 
 function toggleSubnav(listName) {
     var element = document.getElementsByClassName(listName)[0];
@@ -31,10 +34,10 @@ export default class HeaderComponent extends Component {
                       <div className='Subnav'>
                         <div className='SublistA'>
                           <ul>
-                            <li>Photography</li>
-                            <li>Photographers</li>
-                            <li>Design</li>
-                            <li>Selected 2D</li>
+                            <li onClick={() => toggleSubnav("SublistA")}><Link to="/">Photography</Link></li>
+                            <li onClick={() => toggleSubnav("SublistA")}><Link to="/photographers">Photographers</Link></li>
+                            {/* <li>Design</li>
+                            <li>Selected 2D</li> */}
                           </ul>
                         </div>
                       </div>

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -21,10 +22,12 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root'),
-  document.body.addEventListener('keydown', App.handleImgSwitch)
+  // document.body.addEventListener('keydown', App.handleImgSwitch)
 );
 
 
