@@ -1,0 +1,616 @@
+/* TODO: Change canvas padding color to white */
+
+
+
+.App {
+  text-align: left;
+  font-family: inherit;
+  background-position-x: left; 
+  height: inherit;
+}
+
+
+/* 
+###############
+SMALL WIDTH - (Mobile)
+############### 
+*/
+@media (max-width: 950px) {
+  .Canvas{
+    border: 30px solid white;
+  }
+
+  .Title {
+    font-size: 5px;
+    height: 30px; 
+  }
+
+  .Navbar {
+    font-size: 8px; 
+    width: 40px; 
+  }
+
+  .Header {
+    padding-top: 30px;
+    padding-left: 3px;  
+  }
+
+  .Footer {
+    top: 325px; 
+    width: 320px; 
+    /* color: orange;  */
+    font-size: 8px;  
+  }
+
+  .EmailSubmissionText {
+    width: 300;
+  }
+
+.aboutWrapper {
+  height: 200px;
+  width: 260px;
+}
+
+  .contactBoxWrapper textarea{
+    height: 200px;
+    width: 260px;
+  }
+
+  .contactSubmitButton {
+    padding-top: 10px; 
+    width: 265px;
+  }
+
+  .contactSubmitButton button{
+    width: 80px;
+    font-size: 8px; 
+  }
+
+  .CookieMonster{
+    height: 25px;
+    width: auto;
+    padding-left: 30px;
+  }
+
+  .CookieMonsterWrapper input {
+    width: 130px;
+    font-size: 8px;
+    top: -5px;
+    /* z-index: 1; */
+  }
+
+  .EmailSubmissionTextWrapper {
+    padding-left: 25px;
+    display: inline-block;
+    padding-top: 2px;
+  }
+
+  .mediaWrapper {
+    padding-top: 30px; 
+    margin-left: 60px; 
+    width: 100%; 
+  }
+
+  .HomePhoto{
+    height: auto;
+    width: 265px;
+  }
+
+  .PhotoButtonWrapper {
+    width: 265px; 
+  }
+
+  .PhotoButtons {
+    padding-top: 0em; 
+    padding-left: 6px;
+    width: 35px;
+    font-size: 12px;
+  }
+
+  .PhotoLoadingIndicator {
+    font-size: 8px; 
+    padding-left: 110px;
+    position: fixed
+  }
+
+  .ImageInfo {
+    font-size: 8px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 5px;
+  }
+
+  .subheadingTitle p, .coolSitesTitle p, .spotifyTitle p, .photographersTitle p, .labelsTitle p, .tracksTitle p{
+    font-size: 8px; 
+  }
+  
+  .subheadingCaption p, .coolSitesCaption p, .spotifyCaption p, .photographersCaption p, .labelsCaption p, .tracksCaption p{
+    font-size: 8px; 
+    width: 265px; 
+  }
+
+  .subheadingWrapper li{
+    width: 90%; 
+  }
+  
+  .musicArtistsContentWrapper {
+    width: 265px; 
+  }
+
+  .musicArtistsContentWrapper li {
+    font-size: 8px; 
+  }
+
+  .subheadingCaption br {
+    /* height: 5px;  */
+    display: none; 
+  }
+
+  .subheadingCaption {
+    padding-bottom: 7px; 
+  }
+
+  .wrappedScrollBox {
+    width: 300px;
+    height: 230px;
+  }
+
+  .aboutWrapper span {
+    font-size: 8px; 
+  }
+
+  .aboutWrapper li {
+    font-size: 8px; 
+  }
+
+}
+
+
+/* 
+###############
+LARGE WIDTH - (Desktop) 
+############### 
+*/
+@media (min-width: 950px) {
+  .Canvas{
+    border: 45px solid white;
+  }
+
+  .Title {
+    font-size: 9px;
+    height: 60px;
+  }
+
+  .Navbar {
+    font-size: 14px; 
+    width: 100px; 
+  }
+
+  .Header {
+    padding-top: 60px;
+    padding-left: 8px; 
+  }
+
+  .Footer {
+    top: 720px;
+    width: 922px; 
+  }
+
+  .mediaWrapper {
+    margin-left: 130px;
+    padding-top: 60px;
+  }
+
+  .HomePhoto{
+    height: auto;
+    width: 800px;
+  }
+
+  .PhotoButtonWrapper {
+    width: 800px;
+  }
+
+  .PhotoButtons {
+    padding-top: 0em; 
+    padding-left: 10px;
+    width: 40px;
+    font-size: 20px;
+  }
+
+  .PhotoLoadingIndicator {
+    padding-top: 0px; 
+    padding-left: 350px;
+    position: fixed
+  }
+
+  .ImageInfo {
+    font-size: 14px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 10px; 
+  }
+
+  .EmailSubmissionText {
+    width: 700;
+  }
+
+  .CookieMonsterWrapper {
+    height: 50px;
+    width: 100px;
+  }
+
+  .CookieMonsterWrapper input {
+    top: -10px;
+  }
+
+  .CookieMonster{
+    height: 35px;
+    width: auto;
+    padding-left: 65px;
+  }
+
+  .EmailSubmissionTextWrapper {
+    padding-left: 200px;
+    display: inline-block;
+    padding-top: 7px;
+  }
+
+  .aboutWrapper {
+    height: 500px;
+    width: 790px;
+  }
+
+  .contactBoxWrapper textarea{
+    height: 500px;
+    width: 790px;
+  }
+
+  .contactSubmitButton {
+    padding-top: 20px; 
+    width: 795px;
+  }
+
+  .contactSubmitButton button{
+    width: 150px;
+  }
+
+  .wrappedScrollBox {
+    width: 800px;
+    height: 550px;
+  }
+
+  .subheadingTitle p, .coolSitesTitle p, .spotifyTitle p, .photographersTitle p, .labelsTitle p, .tracksTitle p{
+    font-size: 15px; 
+  }
+  
+  .subheadingCaption p, .coolSitesCaption p, .spotifyCaption p, .photographersCaption p, .labelsCaption p, .tracksCaption p{
+    font-size: 14px; 
+  }
+
+  .subheadingWrapper li{
+    width: 800px; 
+  }
+  
+  .musicArtistsContentWrapper li {
+    font-size: 14.5px; 
+  }
+
+  .aboutWrapper span {
+    font-size: 15px; 
+  }
+
+}
+
+a {
+  text-decoration: none;
+  color: #2A5DB0;
+} 
+
+ul{
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0;
+}
+
+/* ul li:hover{
+  color: lightslategray;
+} */
+
+
+a:visited {
+  text-decoration: none;
+  text-decoration-color: inherit;
+  color: #2A5DB0;
+}
+
+.Title{
+  position: fixed;
+  /* font-size: 9px; */
+  /* padding-top: 10px; */
+  /* padding-left: 8px; */
+  background-color: white;
+  z-index: 1;
+}
+
+.Title a {
+  color: black;
+}
+
+.Title h1{
+  margin-block-start: 0.0em;
+  margin-block-end: 0.0em;
+}
+
+.PhotoSpacer{
+  padding-top: 0px;
+}
+
+.Header{
+  position: fixed;
+  float: none;
+  height: inherit;
+}
+
+.Navbar{
+  /* position: fixed;
+  top: 105px; */
+  /* padding-top: 10px; */
+  /* font-size: 14px; */
+  font-weight:bold;
+  /* width: 100px; */
+  cursor: pointer;
+}
+
+.Navbar a {
+  color: inherit;
+}
+
+.Navbar ul li:hover {
+  color: lightslategray;
+}
+
+/* Hidden sublists */
+.Subnav{
+  font-weight: normal;
+}
+
+.SublistA {
+  visibility: hidden;
+  display: none;
+} 
+
+.SublistB {
+  visibility: hidden;
+  display: none;
+} 
+
+.SublistC {
+  visibility: hidden;
+  display: none;
+} 
+
+.SublistD {
+  visibility: hidden;
+  display: none;
+} 
+
+.SublistE {
+  visibility: hidden;
+  display: none;
+} 
+
+.SublistF {
+  visibility: hidden;
+  display: none;
+} 
+
+.mediaWrapper {
+  position: fixed; 
+}
+
+.PhotoButtonWrapper{
+  display: inline-block;
+}
+
+.PhotoButtons{
+  float: left;
+  display: table;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ImageInfo{
+  float: right;
+  text-align: right;
+}
+
+.LeftButton{
+  float: left;
+}
+
+.RightButton{
+  float: right;
+}
+
+.Footer{
+  position: fixed;
+  padding-left: 8px;
+  /* padding-top: 10px; */
+  /* height: auto; */
+  text-align: justify;
+}
+
+.FooterTextBox a { 
+  text-decoration: none;
+  color: black;
+}
+
+.EmailBox ul{
+  list-style-type: none;
+  padding: 0px;
+}
+
+.EmailBox{
+  display: flex;
+  height: 70px;
+}
+
+.EmailBox p {
+  display: inline
+}
+
+.contactBoxWrapper textarea {
+  vertical-align:top;
+}
+
+.contactSubmitButton button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  float: right;
+  padding-right: 0px;
+}
+
+.contactSubmitButton button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* .EmailSubmissionTextWrapper li {
+} */
+
+.CookieMonsterWrapper {
+  display: inline;
+  padding: 0px;
+}
+
+.CookieMonsterWrapper input {
+  position: relative;
+  z-index: 1;
+}
+
+.CookieMonsterWrapper li{
+  display: inline;
+  width: 150px;
+}
+
+
+
+ 
+/* .subheadingTitle p, .coolSitesTitle p, .spotifyTitle p, .photographersTitle p, .labelsTitle p, .tracksTitle p{
+  font-size: 15px;
+  font-weight: bold;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.subheadingCaption p, .coolSitesCaption p, .spotifyCaption p, .photographersCaption p, .labelsCaption p, .tracksCaption p{
+  font-size: 14px;
+  text-decoration: italic;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  color: grey;
+} */
+
+.subheadingTitle p, .coolSitesTitle p, .spotifyTitle p, .photographersTitle p, .labelsTitle p, .tracksTitle p{
+  font-weight: bold;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.subheadingCaption p, .coolSitesCaption p, .spotifyCaption p, .photographersCaption p, .labelsCaption p, .tracksCaption p{
+  text-decoration: italic;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  color: grey;
+}
+
+
+
+/* .musicArtistContentWrapper ul li:hover, .coolSitesItemTitle a:hover, .coolSitesItemCaption p:hover {
+  color: lightslategray;
+} */
+
+.tracksContentWrapper {
+  padding-top: 15px;
+}
+
+.tracksContentWrapper li{
+  padding-top: 15px;
+}
+
+.labelsContentWrapper {
+  padding-top: 15px;
+}
+
+.labelsContentWrapper li {
+  padding-top: 15px;
+}
+
+/* .coolSitesContentWrapper {
+  padding-top: 15px;
+}
+
+.coolSitesContentWrapper li{
+  padding-bottom: 15px;  
+} */
+
+/* .coolSitesItemTitle {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0px;
+}
+
+.coolSitesItemCaption {
+  font-size:13px;
+  padding: 0px;
+}
+
+.coolSitesItemCaption p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+} */
+
+.aboutWrapper {
+  padding-top: none; 
+}
+
+.aboutWrapper span {
+  font-weight: bold;
+}
+
+.contactWrapper {
+  height: 500px;
+  width: inherit;
+}
+
+.contactContentWrapper {
+  height: inherit;
+  width: inherit;
+}
+
+.contactContentWrapper img{
+  /* TODO: actually center this within the div isntead of padding it */
+  padding-left: 150px;
+  padding-top: 50px;
+  height: 200px;
+  width: 265px;
+}
+
+.wrappedScrollBox {
+  overflow: scroll;
+  /* width: 800px; */
+  /* height: 550px; */
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.wrappedScrollBox::-webkit-scrollbar {
+  display: none;
+}
+
+.BookButtons {
+  padding-top: 3px; 
+}
