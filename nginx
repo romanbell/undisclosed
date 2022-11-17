@@ -1,0 +1,30 @@
+# /etx/nginx/sites-enabled
+# V2 (prod)
+server {
+    listen 80 default_server;
+    listen [::]:80; 
+    server_name undisclosedmedia.xyz www.undisclosedmedia.xyz;
+    
+    add_header 'Access-Control-Allow-Origin' '*';
+    add_header 'Access-Control-Allow-Credentials' 'true';
+    add_header 'Access-Control-Allow-Headers' 'Authorization,Accept,Origin,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range';
+    add_header 'Access-Control-Allow-Methods' 'GET,POST,OPTIONS,PUT,DELETE,PATCH';
+
+
+  # react app & front-end files
+   location / {
+    root /home/ubuntu/undisclosed/build;
+    try_files $uri /index.html;
+  }
+
+    location /api/ {
+        # proxy_pass http://undisclosedmedia:5000;
+        # proxy_pass http://172.31.20.7:5000;
+        proxy_pass http://127.0.0.1:5000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
