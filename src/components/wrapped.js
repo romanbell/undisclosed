@@ -20,7 +20,7 @@ export default class SpotifyWrapped extends Component {
 async componentDidMount() {
     // GET request using fetch with set headers
     const headers = { 'Content-Type': 'application/json' }
-    const reqURL = 'http://localhost:5000/api/v1/spotifyWrappedTracks?year=' + this.state.year
+    const reqURL = 'http://www.undisclosedmedia.xyz/api/v1/spotifyWrappedTracks?year=' + this.state.year
     const response = await fetch(reqURL, { headers })
     const JSONresponse = await response.json()
     this.setState({tracks: JSONresponse})

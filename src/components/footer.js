@@ -50,7 +50,7 @@ export default class Footer extends Component {
             redirect: 'follow'
             };
 
-            const response = await fetch("http://localhost:5000/api/v1/emailSubmission", requestOptions)
+            const response = await fetch("http://www.undisclosedmedia.xyz/api/v1/emailSubmission", requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));

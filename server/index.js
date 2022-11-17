@@ -1,6 +1,6 @@
 import app from "./server.js"
 import mongodb from "mongodb"
-import dotenv from "dotenv"
+//import dotenv from "dotenv"
 import MusicArtistsDAO from "./access/musicArtistsDAO.js"
 import PhotographersDAO from "./access/photographersDAO.js"
 import PhotographsGalleryDAO from "./access/photographyGalleryDAO.js"
@@ -10,12 +10,14 @@ import EmailSubmissionDAO from "./access/emailSubmissionDAO.js"
 import MessageSubmissionDAO from "./access/messageSubmissionDAO.js"
 import CoolSitesDAO from "./access/coolSitesDAO.js"
 
-dotenv.config()
+//dotenv.config()
 const MongoClient = mongodb.MongoClient
-const port = process.env.PORT
+//const port = process.env.PORT
+const port = 5000
+
 
 MongoClient.connect(
-    process.env.UNDISCLOSED_DB_URI,
+    "mongodb+srv://romanbell:mongodbpassword@cluster0.qzaqz.mongodb.net/undisclosed_db?retryWrites=true&w=majority",
         {
         wtimeoutMS: 2500,
         }

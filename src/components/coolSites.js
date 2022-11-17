@@ -15,7 +15,7 @@ export default class CoolSites extends Component {
     async componentDidMount() {
         // GET request using fetch with set headers
         const headers = { 'Content-Type': 'application/json' }
-        const reqURL = 'http://localhost:5000/api/v1/coolsites?types=Music,Misc,Art,Photography,Design,Writing,Biography'
+        const reqURL = 'http://www.undisclosedmedia.xyz/api/v1/coolsites?types=Music,Misc,Art,Photography,Design,Writing,Biography'
         const response = await fetch(reqURL, { headers })
         const JSONresponse = await response.json()
         this.setState({sites: JSONresponse})

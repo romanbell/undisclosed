@@ -31,7 +31,7 @@ export default class Contact extends Component {
             redirect: 'follow'
             };
 
-            const response = await fetch("http://localhost:5000/api/v1/messagesubmission", requestOptions)
+            const response = await fetch("http://www.undisclosedmedia.xyz/api/v1/messagesubmission", requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));

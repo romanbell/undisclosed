@@ -27,7 +27,7 @@ export default class MediaPhotoView extends Component {
 
         // This request just loads first image to improve response time 
         const headers = { 'Content-Type': 'application/json' }
-        const response = await fetch('http://localhost:5000/api/v1/galleryphotographs?filename=0045.jpg', { headers })
+        const response = await fetch('http://www.undisclosedmedia.xyz/api/v1/galleryphotographs?filename=0045.jpg', { headers })
         const JSONresponse = await response.json()
         this.setState({galleryPhotos: JSONresponse})
         this.setState({max_idx: this.state.galleryPhotos.galleryPhotographs.length - 1})
@@ -37,7 +37,7 @@ export default class MediaPhotoView extends Component {
     async loadAllPhotographs() {
       // console.log('loading all photographs')
       const headers = { 'Content-Type': 'application/json' }
-      const response = await fetch('http://localhost:5000/api/v1/galleryphotographs', { headers })
+      const response = await fetch('http://www.undisclosedmedia.xyz/api/v1/galleryphotographs', { headers })
       const JSONresponse = await response.json()
       // Add 0045.jpg to front of object so view won't change on full load response
       JSONresponse.galleryPhotographs.unshift(this.state.galleryPhotos.galleryPhotographs[0])

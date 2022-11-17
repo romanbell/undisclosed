@@ -18,7 +18,7 @@ export default class Photographers extends Component {
     async componentDidMount() {
         // GET request using fetch with set headers
         const headers = { 'Content-Type': 'application/json' }
-        const response = await fetch('http://localhost:5000/api/v1/photographers', { headers })
+        const response = await fetch('http://www.undisclosedmedia.xyz/api/v1/photographers', { headers })
         const JSONresponse = await response.json()
         this.setState({photographers: JSONresponse})
         
