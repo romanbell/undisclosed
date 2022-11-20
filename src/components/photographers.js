@@ -8,6 +8,7 @@ export default class Photographers extends Component {
         super(props);
 
         this.state = {
+            baseURL: this.props.baseURL,
             photographers: {'photographers': {'name': 'await'}},
             photographer_ids: [],
             idx: 0,
@@ -18,7 +19,7 @@ export default class Photographers extends Component {
     async componentDidMount() {
         // GET request using fetch with set headers
         const headers = { 'Content-Type': 'application/json' }
-        const response = await fetch('http://www.undisclosedmedia.xyz/api/v1/photographers', { headers })
+        const response = await fetch(this.state.baseURL + '/api/v1/photographers', { headers })
         const JSONresponse = await response.json()
         this.setState({photographers: JSONresponse})
         
@@ -51,6 +52,9 @@ export default class Photographers extends Component {
         this.setState({photographers: {photographers_data_object}})
         this.setState({idx: 0})
         this.setState({max_idx: j})
+    }
+
+    componentWillUnmount() {
     }
 
     populate_photographers_element() {

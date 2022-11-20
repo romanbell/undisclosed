@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 export default class AboutPage extends Component {
     
+    async componentDidMount() {}
+    componentWillUnmount() {}
+
     render() {
         return(
             <div className="coolSitesWrapper">
@@ -30,6 +33,8 @@ export default class AboutPage extends Component {
                             <li> <a href="https://expressjs.com" target="_blank" rel="noreferrer noopener"> ExpressJS </a>  - Back end framework for NodeJS </li>
                             <li> <a href="https://nodejs.org" target="_blank" rel="noreferrer noopener"> NodeJS </a> - Javascript runtime environment </li>
                             <li> <a href="https://reactjs.org" target="_blank" rel="noreferrer noopener"> ReactJS </a> - Front end library for building user interface</li>
+                            <li> <a href="https://aws.amazon.com/pm/ec2/" target="_blank" rel="noreferrer noopener"> AWS EC2 </a> - Cloud based virtual web server for hosting</li>
+                            <li> <a href="https://www.nginx.com" target="_blank" rel="noreferrer noopener"> NGINX </a> - Reverse proxy web server </li>
                             <br></br>
                             
                             <span> Data Sources </span>

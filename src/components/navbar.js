@@ -75,7 +75,7 @@ export default class Navbar extends Component {
                           <ul>
                             <li onClick={() => toggleSubnav("SublistF")}><Link to="/about">About</Link></li>
                             {/* <li onClick={() => toggleSubnav("SublistF")}><Link to="/contact">Email me</Link></li> */}
-                            <li onClick={() => toggleSubnav("SublistF")}><Link to="/contact">Message me</Link></li>
+                            <li onClick={() => toggleSubnav("SublistF")}><Link to="/contact">Contact</Link></li>
                           </ul>
                         </div>
                       </div>

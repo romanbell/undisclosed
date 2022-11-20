@@ -5,6 +5,7 @@ export default class CoolSites extends Component {
         super(props);
     
         this.state = {
+            baseURL: this.props.baseURL,
             sites: {'sites': {'name': 'await'}},
             site_ids: [],
             idx: 0,
@@ -15,7 +16,7 @@ export default class CoolSites extends Component {
     async componentDidMount() {
         // GET request using fetch with set headers
         const headers = { 'Content-Type': 'application/json' }
-        const reqURL = 'http://www.undisclosedmedia.xyz/api/v1/coolsites?types=Music,Misc,Art,Photography,Design,Writing,Biography'
+        const reqURL = this.state.baseURL + '/api/v1/coolsites?types=Music,Misc,Art,Photography,Design,Writing,Biography'
         const response = await fetch(reqURL, { headers })
         const JSONresponse = await response.json()
         this.setState({sites: JSONresponse})
@@ -53,6 +54,9 @@ export default class CoolSites extends Component {
         this.setState({site_ids: site_ids})
         this.setState({sites: {sites_data_obj}})
         this.setState({idx: 0})
+    }
+
+    componentWillUnmount() {
     }
     
     get_title(idx) {

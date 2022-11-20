@@ -3,6 +3,7 @@
 // - Fix this err "Warning: Each child in a list should have a unique "key" prop."
 // - Squash all commits into one
 // - Build shuffle method for photos
+// - Collapse all subnavs once link is clicked (right now does just one)
 
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
@@ -19,6 +20,8 @@ import SpotifyWrapped from "./components/wrapped";
 import AboutPage from "./components/about.js";
 // import DevComponent from "./components/devtest";
 
+const BASE_URL = process.env.REACT_APP_BASE_URL_REQUEST;
+
 function App() {
   return (
     <div className='App'>
@@ -27,13 +30,13 @@ function App() {
         <Navbar />
           <div className='mediaWrapper'>
             <Routes>
-              <Route path="/" element={<MediaPhotoView />} />
-              <Route path="/photographers" element={<Photographers />} />
-              <Route path="/coolSites" element={<CoolSites />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/readingList" element={<ReadingList />} />
-              <Route path="/wrapped2021" element={<SpotifyWrapped key="1" year="2021"/>} />
-              <Route path="/wrapped2020" element={<SpotifyWrapped key="2" year="2020"/>} />
+              <Route path="/" element={<MediaPhotoView baseURL={BASE_URL}/>} />
+              <Route path="/photographers" element={<Photographers baseURL={BASE_URL}/>} />
+              <Route path="/coolSites" element={<CoolSites baseURL={BASE_URL}/>} />
+              <Route path="/contact" element={<Contact baseURL={BASE_URL}/>} />
+              <Route path="/readingList" element={<ReadingList baseURL={BASE_URL}/>} />
+              <Route path="/wrapped2021" element={<SpotifyWrapped baseURL={BASE_URL} key="1" year="2021"/>} />
+              <Route path="/wrapped2020" element={<SpotifyWrapped baseURL={BASE_URL} key="2" year="2020"/>} />
               <Route path="/about" element={<AboutPage />} />
               {/* <Route path="/dev" element={<DevComponent />} /> */}
             </Routes>

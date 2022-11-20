@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 
 export default class Contact extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            baseURL: this.props.baseURL,
+        };
+    }
+ 
+
     async componentDidMount() {
         window.addEventListener('keydown', this.handleKeyDown);
     }
@@ -31,7 +41,7 @@ export default class Contact extends Component {
             redirect: 'follow'
             };
 
-            const response = await fetch("http://www.undisclosedmedia.xyz/api/v1/messagesubmission", requestOptions)
+            const response = await fetch(this.state.baseURL + "/api/v1/messagesubmission", requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
@@ -87,7 +97,7 @@ export default class Contact extends Component {
                         <p>Contact</p>
                     </div>
                     <div className="subheadingCaption">
-                        <p>Send a love letter (or hate letter I guess)</p> 
+                        <p>Send a love letter (or hate letter)</p> 
                         <br></br>
                     </div>
                 </div>

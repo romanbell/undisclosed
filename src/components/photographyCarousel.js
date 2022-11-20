@@ -12,6 +12,10 @@ export default class MediaPhotoView extends Component {
         this.handleKeyDown = this.handleKeyDown.bind(this);
 
         this.state = {
+            baseURL: this.props.baseURL,
+            // Need to use this in the event that component is unmounted before scync loadAllPhotographs() is complete, memory leakage as of now
+            // isMounted: false,
+            // isLoaded: false,
             galleryPhotos: {'name': 'await'},
             artist_ids: [],
             idx: 0,
@@ -27,7 +31,7 @@ export default class MediaPhotoView extends Component {
 
         // This request just loads first image to improve response time 
         const headers = { 'Content-Type': 'application/json' }
-        const response = await fetch('http://www.undisclosedmedia.xyz/api/v1/galleryphotographs?filename=0045.jpg', { headers })
+        const response = await fetch(this.state.baseURL + '/api/v1/galleryphotographs?filename=0045.jpg', { headers })
         const JSONresponse = await response.json()
         this.setState({galleryPhotos: JSONresponse})
         this.setState({max_idx: this.state.galleryPhotos.galleryPhotographs.length - 1})
@@ -37,7 +41,7 @@ export default class MediaPhotoView extends Component {
     async loadAllPhotographs() {
       // console.log('loading all photographs')
       const headers = { 'Content-Type': 'application/json' }
-      const response = await fetch('http://www.undisclosedmedia.xyz/api/v1/galleryphotographs', { headers })
+      const response = await fetch(this.state.baseURL + '/api/v1/galleryphotographs', { headers })
       const JSONresponse = await response.json()
       // Add 0045.jpg to front of object so view won't change on full load response
       JSONresponse.galleryPhotographs.unshift(this.state.galleryPhotos.galleryPhotographs[0])
@@ -49,6 +53,7 @@ export default class MediaPhotoView extends Component {
 
     componentWillUnmount() {
         window.removeEventListener('keydown', this.handleKeyDown);
+
     }
 
     get_binary_photo_data() {
@@ -56,7 +61,7 @@ export default class MediaPhotoView extends Component {
             return this.state.galleryPhotos.galleryPhotographs[this.state.idx].data_bin         
         }
         else {
-            return '---'
+            return null
         }
     }
 
