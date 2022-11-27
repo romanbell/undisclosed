@@ -86,7 +86,7 @@ export default class Footer extends Component {
                     </div>
                     <div className = 'EmailSubmissionTextWrapper'>
                         <li>
-                            <p className = 'EmailSubmissionText'>The cookie monster that lives here survives on a strict diet of email addresses, please feed him so he doesn't go hungry. I probably won't send you anything, but we can still be friends. </p>
+                            <p className = 'EmailSubmissionText'>The cookie monster that lives here survives on a strict diet of email addresses, please feed him so he doesn't go hungry. </p>
                         </li>
                     </div>
                 </ul>
