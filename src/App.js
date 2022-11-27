@@ -1,5 +1,4 @@
 // TODO:
-// - Figure out react-dom.development.js error ERR_INVALID_URL
 // - Fix this err "Warning: Each child in a list should have a unique "key" prop."
 // - Squash all commits into one
 // - Build shuffle method for photos
