@@ -22,10 +22,18 @@ MONGO_GOODREADS_NAME = 'goodreads'
 VIZ_FILEPATH = 'visual_artists.csv'
 MONGO_VIZ_NAME = 'visual_artists'
 
+# Spotify Wrapped
+WRAPPED_FILEPATHS = {
+    2020: '2020_wrapped.json',
+    2021: '2021_wrapped.json',
+    2022: '2022_wrapped.json'
+}
+WRAPPED_NAME = 'wrapped'
+
 class MongoLoader():
     def __init__(self):
         print(os.getcwd())
-        load_dotenv(os.path.join(os.getcwd(), 'server', '.env'))
+        load_dotenv(os.path.join(os.getcwd(), '.env'))
         self.MONGODB_PASSWORD = os.environ.get('MONGO_PWD')
         if self.MONGODB_PASSWORD is None:
             raise Exception('Error loading env vars')
@@ -53,6 +61,28 @@ class MongoLoader():
         self.delet_all_existing_records(conn=mongo_conn, collection_to_delete=MONGO_VIZ_NAME)
         self.upload_json_df_to_db(conn=mongo_conn, df=vartists_df, collection_name=MONGO_VIZ_NAME)
         print('Visual artists records loaded successfully')
+
+    def trigger_wrapped_load(self):
+        print('Loading all spotify wrapped data into MongoDB')
+        mongo_conn = self.connect_to_db()
+        self.delet_all_existing_records(conn=mongo_conn, collection_to_delete=WRAPPED_NAME)
+        self.parse_and_upload_wrapped_json(conn=mongo_conn)
+        print("Wrapped loaded successfully")
+
+    def parse_and_upload_wrapped_json(self, conn):
+        db = conn.get_database(MONGO_DB_NAME)
+        spotify_collection = db[WRAPPED_NAME]
+        for yr, filepath in WRAPPED_FILEPATHS.items():
+            with open(os.path.join('loaders', filepath), encoding='UTF-8') as d:
+                spotify_json = json.load(d)
+            spotify_tracks = spotify_json.get('items')
+            rank = 1
+            for song in spotify_tracks:
+                song['rank'] = rank
+                song['year'] = yr
+                spotify_collection.insert_one(song)
+                rank += 1
+            print(f"All wrapped tracks for {yr} inserted successfully")
 
     def get_visual_artists_to_json_df(self):
         def _parse_location_list(l):
@@ -160,5 +190,6 @@ if __name__ == '__main__':
     its_mongo_time = MongoLoader()
     # its_mongo_time.trigger_cool_sites_load()
     # its_mongo_time.trigger_goodreads_load()
-    its_mongo_time.trigger_vartists_load()
+    # its_mongo_time.trigger_vartists_load()
+    its_mongo_time.trigger_wrapped_load()
     print('load complete')

@@ -34,8 +34,9 @@ function App() {
               <Route path="/coolSites" element={<CoolSites baseURL={BASE_URL}/>} />
               <Route path="/contact" element={<Contact baseURL={BASE_URL}/>} />
               <Route path="/readingList" element={<ReadingList baseURL={BASE_URL}/>} />
+              <Route path="/wrapped2022" element={<SpotifyWrapped baseURL={BASE_URL} key="2" year="2022"/>} />
               <Route path="/wrapped2021" element={<SpotifyWrapped baseURL={BASE_URL} key="1" year="2021"/>} />
-              <Route path="/wrapped2020" element={<SpotifyWrapped baseURL={BASE_URL} key="2" year="2020"/>} />
+              <Route path="/wrapped2020" element={<SpotifyWrapped baseURL={BASE_URL} key="0" year="2020"/>} />
               <Route path="/about" element={<AboutPage />} />
               {/* <Route path="/dev" element={<DevComponent />} /> */}
             </Routes>

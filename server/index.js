@@ -15,7 +15,7 @@ const MongoClient = mongodb.MongoClient
 //const port = process.env.PORT
 const port = 5000
 
-const MONGO_PWD = 'XXXXXXXXX'
+const MONGO_PWD = 'XXXXXXXX'
 
 MongoClient.connect(
     "mongodb+srv://romanbell:" + MONGO_PWD + "@cluster0.qzaqz.mongodb.net/undisclosed_db?retryWrites=true&w=majority",
