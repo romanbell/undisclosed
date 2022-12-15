@@ -1,0 +1,7 @@
+https://github.com/spotify/web-api-auth-examples
+use this repo to get key
+
+https://api.spotify.com/v1/playlists/37i9dQZF1EMdWN3KIr0yhu/tracks
+use this endpoint to get data on playlist (URI from spotify)
+
+Headers -> Authorization: Bearer <ENTER AUTH KEY>
