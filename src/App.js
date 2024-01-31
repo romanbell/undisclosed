@@ -3,6 +3,7 @@
 // - Squash all commits into one
 // - Build shuffle method for photos
 // - Collapse all subnavs once link is clicked (right now does just one)
+// - Create way to write to db from closed endpoint
 
 import React from "react";
 import { Routes, Route } from 'react-router-dom';

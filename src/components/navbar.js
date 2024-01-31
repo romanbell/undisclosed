@@ -39,6 +39,7 @@ export default class Navbar extends Component {
                       <div className='Subnav'>
                         <div className='SublistB'>
                           <ul>
+                            <li onClick={() => toggleSubnav("SublistB")}><Link to="/wrapped2023">2023</Link></li>
                             <li onClick={() => toggleSubnav("SublistB")}><Link to="/wrapped2022">2022</Link></li>
                             <li onClick={() => toggleSubnav("SublistB")}><Link to="/wrapped2021">2021</Link></li>
                             <li onClick={() => toggleSubnav("SublistB")}><Link to="/wrapped2020">2020</Link></li>

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 // https://willadler.com/V2
+// https://darrenthompsonfineart.blogspot.com/2023/03/
+// https://www.jaymaisel.com/
+
 
 export default class Photographers extends Component {
 

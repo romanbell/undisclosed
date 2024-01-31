@@ -15,7 +15,7 @@ MONGO_COOL_SITES_NAME = 'cool_sites'
 
 
 # Goodreads
-GOODREADS_FILEPATH = 'Goodreads_Export_20221107.xlsx'
+GOODREADS_FILEPATH = 'Goodreads_Export_20240130.xlsx'
 MONGO_GOODREADS_NAME = 'goodreads'
 
 # Visual Artists
@@ -26,7 +26,8 @@ MONGO_VIZ_NAME = 'visual_artists'
 WRAPPED_FILEPATHS = {
     2020: '2020_wrapped.json',
     2021: '2021_wrapped.json',
-    2022: '2022_wrapped.json'
+    2022: '2022_wrapped.json',
+    2023: '2023_wrapped.json'
 }
 WRAPPED_NAME = 'wrapped'
 
@@ -189,7 +190,7 @@ class MongoLoader():
 if __name__ == '__main__':
     its_mongo_time = MongoLoader()
     # its_mongo_time.trigger_cool_sites_load()
-    # its_mongo_time.trigger_goodreads_load()
+    its_mongo_time.trigger_goodreads_load()
     # its_mongo_time.trigger_vartists_load()
     its_mongo_time.trigger_wrapped_load()
     print('load complete')
